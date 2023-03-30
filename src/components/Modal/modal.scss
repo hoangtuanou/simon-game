@@ -1,0 +1,80 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-inner {
+    background-color: white;
+    min-width: 400px;
+    height: 200px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    button {
+      width: 100px;
+      height: 50px;
+      font-size: 25px;
+      font-family: "Ubuntu", sans-serif;
+      color: black;
+      text-transform: capitalize;
+      line-height: 25px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #C5283D;
+        color: white;
+      }
+    }
+
+    p {
+      line-height: 20px;
+    }
+
+    .try-again-btn {
+      width: 200px;
+    }
+  }
+
+  .result {
+    width: 100%;
+
+    h3 {
+      width: 110px;
+    }
+
+    .title-wrapper {
+      display: flex;
+      gap: 20px;
+
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+
+    .title {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  user-select: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h3, p {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 35px;
+  color: black;
+  margin: 0;
+  padding: 15px 0 5px;
+}
+
+.controller {
+  font-size: 25px;
+  font-family: "Merriweather", serif;
+  color: #272932;
+  display: flex;
+  justify-content: center;
+
+  .startBtn {
+    width: 200px;
+    border: none;
+    background: #272932;
+    color: #ffc952;
+    border-radius: 25px;
+    margin-top: 7px;
+    font-size: 25px;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 50px;
+
+    &:hover {
+      cursor: pointer;
+      color: #00dffc;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.container {
+  max-width: 550px;
+  width: 100%;
+  margin: 40px auto;
+  font-size: 125px;
+  font-weight: bold;
+  color: #272932;
+  overflow: hidden;
+  background: #282828;
+  box-sizing: border-box;
+  border: 5px solid #272932;
+
+  .gameBtn {
+    width: 50%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    background: #ff7473;
+    border: 5px solid #272932;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  .flash {
+    filter: brightness(2);
+  }
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .controller {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
