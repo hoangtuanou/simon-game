@@ -1,6 +1,6 @@
 # Simon Game
 
-At a boring Sunday, I just want to build something fun with my Frontend skill, so WOALA! I made a Simon Game using ReactJS.
+On a boring Sunday, I just want to build something fun with my Frontend skill, so WOALA! I made a Simon Game using ReactJS.
 
 You can play it [here](https://csb-mozx98ljrx.vercel.app/)
 
